@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Guitar Chords</title>
+  </head>
+  <body>
+    <div style="display: flex;">
+      <div style="flex: 1;">
+        <div>
+          <label style="font-weight: bold; font-size: 12px;">Chords List</label>
+        </div>
+        <div>
+          <select style="height: 200px; width: 100px; background-color: lavender; cursor: plus;">
+            {% for chord in chords_options_list %}
+              <option>{{ chord }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div style="flex: 1;">
+        <div>
+          <label style="font-weight: bold; font-size: 12px;">Suggested Chords</label>
+        </div>
+        <div>
+          <select style="height: 200px; width: 150px; background-color: lavenderblush; cursor: arrow;">
+            {% for chord in suggested_chords %}
+              <option>{{ chord }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>Lyrics</label>
+      <textarea style="height: 200px; width: 500px;"></textarea>
+    </div>
+    <div>
+      <button>Paste and Parse</button>
+      <button>Save</button>
+    </div>
+  </body>
+</html>
